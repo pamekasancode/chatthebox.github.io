@@ -1,0 +1,305 @@
+body {
+  background-color: #222327;
+}
+
+.preloader {
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  min-height: 100%;
+  background-color: #222327;
+}
+
+.preloader .content {
+  position: absolute;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+}
+
+.preloader .image {
+  height: 120px;
+}
+
+.preloader .content img {
+  width: 100px;
+  animation: load 3s infinite;
+
+}
+
+.preloader h1 {
+  color: #fff;
+  padding: 17px;
+  
+}
+
+.preloader p {
+  color: #888;
+  line-height: 3px;
+}
+
+.preloader .copyright {
+  font-size: 13px;
+}
+
+
+@keyframes load {
+  0%{
+    transform: translateX(-50%);
+    opacity: 0.1;
+    width: 70px;
+  }
+  25%{
+    transform: translateX(50%);
+    opacity: 0.1;
+    width: 100px;
+  }
+  50%{
+    transform: translateX(-50%);
+    opacity: 1;
+    width: 100px;
+  }
+  75%{
+    transform: translateX(50%);
+    opacity: 1;
+    width: 70px;
+  }
+  100%{
+    transform: translateX(-50%);
+    opacity: 1;
+    width: 100px;
+  }
+}
+
+.notice {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 70%;
+  background-color: #2B2C31;
+  padding: 17px;
+}
+
+.notice h4 {
+  color: #17CECC;
+}
+
+.notice p {
+  color: #4f4f4f;
+  font-size: 14px;
+}
+
+.about {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 70%;
+  background-color: #2B2C31;
+  padding: 17px;
+  display: none;
+}
+
+.about h4 {
+  color: #17CECC;
+}
+
+.about i {
+  font-size: 20px;
+}
+
+.about .fa-times {
+  color: #888;
+  float: right;
+  margin-top: 3px;
+}
+
+.about .fa-github {
+  color: #17CECC;
+
+}
+
+.about p {
+  color: #4f4f4f;
+  font-size: 14px;
+}
+
+.topbar {
+  background-color: #2B2C31;
+  padding: 7px;
+  top: 0;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  color: #fff;
+}
+
+.topbar img {
+  width: 150px;
+  padding: 5px;
+  margin-left: -10px;
+}
+
+.topbar i {
+  font-size: 25px;
+  margin-top: 10px;
+  color: #aaa;
+  transition: .2s;
+}
+
+.topbar i:hover {
+  transform: scale(0.95);
+}
+
+.input-msg {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 5px;
+  background-color: #222327;
+  height: 50px;
+}
+
+.null {
+  height: 50px;
+}
+
+.input-msg input {
+  background-color: #2B2C31;
+  border: none;
+  outline: none;
+}
+
+.input-msg input:hover,
+.input-msg input:focus {
+  box-shadow: none;
+  border: none;
+  background-color: #2B2C31;
+  color: #fff;
+}
+
+.input-msg button {
+  outline: none;
+  margin-left: 5px;
+  border: none;
+  color: #17CECC;
+}
+
+.input-msg button:hover {
+  box-shadow: none !important;
+  border: none !important;
+  color: #17CECC;
+}
+
+.chat-box {
+  padding-top: 70px;
+  padding-left: 10px;
+  overflow: scroll;
+  height: auto;
+}
+
+.chat-box .chat {
+  padding-bottom: 30px;
+}
+
+.chat-box .chat h5 {
+  color: #17CECC;
+  font-size: 17px;
+}
+
+.chat-box .chat p {
+  color: #4e4e4e;
+  margin-top: -5px;
+  font-size: 14px;
+  max-width: 80%;
+}
+
+.chat-box .chat .time {
+  float: right;
+  margin-top: -17px;
+  font-size: 13px;
+}
+
+.signin {
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.signin h3 {
+  color: #17CECC;
+}
+
+.signin p {
+  color: #4e4e4e;
+}
+
+.signin .input-group {
+  margin-bottom: 7px;
+}
+
+.signin input {
+  background-color: #2B2C31;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.signin input:hover,
+.signin input:focus {
+  box-shadow: none;
+  border: none;
+  background-color: #2B2C31;
+  color: #fff;
+}
+
+.signin button {
+  outline: none;
+  margin-left: 5px;
+  border: none;
+  color: #17CECC;
+  width: 100px;
+  margin-left: 1px;
+}
+
+.signin button:hover {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.option {
+  background-color: #2B2C31;
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  margin-top: 60px;
+  display: none;
+}
+
+.option.active {
+  display: block;
+  animation: option 700ms;
+}
+
+@keyframes option {
+  0%{transform: translateX(100%);}
+  100%{transform: translateX(0%);}
+}
+
+.option .list-group-item {
+  background-color: #2B2C31;
+}
+
+.option .list-group-item a {
+  color: #17CECC;
+  text-decoration: none;
+  
+}

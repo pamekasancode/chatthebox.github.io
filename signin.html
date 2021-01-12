@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="{Pamekasancode}®"/>
+    <meta name="description" content="Minj Webchat (ChatTheBox)">
+    <meta name="theme-color" content="#222327">
+    <title>Signin</title>
+    <link rel="stylesheet" href="res/bootstrap@5.0.0-alpha2.min.css" type="text/css" media="all" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all"/>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+</head>
+<script type="text/javascript" charset="utf-8">
+  if(localStorage.getItem("user") !== null) {
+    window.location.href="index.html";
+  }
+</script>
+<body>
+  <div class="preloader">
+    <div class="content">
+      <div class="image">
+        <img src="logo.png" alt="" />
+      </div>
+      
+      <h1>ChatTheBox</h1>
+      <p>Private Group Chatting</p>
+      <p class="copyright">© 2021 Pamekasancode</p>
+    </div>
+  </div>
+  <div class="signin">
+    <div class="container">
+      <h3>Underground</h3>
+      <p>Please don't share your privacy in here.</p>
+      <div class="input-group">
+        <input type="text" id="nickname" placeholder="Your Nickname" class="form-control" autocomplete="off" required/>
+      </div>
+      <div class="input-group">
+        <input type="text" id="code" placeholder="Private Code" class="form-control" autocomplete="off" required/>
+      </div>
+      <div class="input-group">
+        <button class="btn btn-dark" id="signin">Signin <i class="fa fa-sign-in"></i></button>
+      </div>
+    </div>
+  </div>
+  <script src="signin.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

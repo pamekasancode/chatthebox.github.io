@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta property="og:title" content="{Pamekasancode}®" />
+    <meta name="description" content="Minj Webchat (ChatTheBox)">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#222327">
+    <title>ChatTheBox</title>
+    <link rel="stylesheet" href="res/bootstrap@5.0.0-alpha2.min.css" type="text/css" media="all" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all"/>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+</head>
+<script type="text/javascript" charset="utf-8">
+  if (localStorage.getItem("user") == null) {
+    location.href="signin.html";
+  }
+</script>
+<body>
+  <div class="notice">
+    <h4>Notice!</h4>
+    <p>Chat sebebasnya asal tidak berkaitan dengan 18++, Sarahcen, maupun berkaitan dengan hal-hal pribadi anda.</p>
+  </div>
+  <div class="about">
+    <i class="fa fa-times close"></i>
+    <h4>About </h4>
+    <p>ChatTheBox adalah sebuah webchatting yang sederhana. web ini hanyalah web mini project sahaja, Terimakasih.</p>
+    <a href="https://github.com/pamekasancode"><i class="fa fa-github"></i></a>
+  </div>
+  <div class="topbar">
+    <div class="container">
+      <img src="ico.png"/>
+      <i class="fa fa-ellipsis-h float-right btn-option"></i>
+    </div>
+  </div>
+  <div class="option">
+    <ul class="list-group">
+      <li class="list-group-item"><a class="nickname"></a></li>
+      <li class="list-group-item"><a class="about-btn">About</a></li>
+      <li class="list-group-item"><a id="logout">Logout <i class="fa fa-sign-out"></i></a></a></li>
+    </ul>
+  </div>
+  <div class="section">
+  <div class="chat-box"> 
+    <div class="container chats">
+      
+    </div>
+  </div>
+  </div>
+  <div class="null"></div>
+  <div class="input-msg">
+    <div class="container">
+      <form id="post">
+        <div class="input-group">
+          <input type="text" id="message" placeholder="Type Message" class="form-control" autocomplete="off" required/>
+          <div class="input-group-append">
+            <button class="btn btn-dark" id="send">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
