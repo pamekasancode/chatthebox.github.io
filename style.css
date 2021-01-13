@@ -200,7 +200,7 @@ body {
 .chat-box {
   padding-top: 70px;
   padding-left: 10px;
-  overflow: scroll;
+  overflow: hidden;
   height: auto;
 }
 
