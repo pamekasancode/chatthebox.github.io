@@ -75,8 +75,14 @@ chatRef.on("value", function(getData) {
   let template = "";
   getData.forEach((data)=> {
     var chat = data.val();
+    var nickname = ""
+    if(chat.nickname == localStorage.getItem("user")) {
+      nickname = "You";
+    } else {
+      nickname = chat.nickname;
+    }
     template += `<div class="chat">
-        <h5>${chat.nickname}</h5>
+        <h5>${nickname}</h5>
         <p>${chat.message}</p>
         <p class="time">${chat.time}</p>
       </div>`;
